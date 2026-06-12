@@ -243,6 +243,21 @@ function bindProgress() {
   window.addEventListener("resize", update);
 }
 
+function registerGsapPlugins() {
+  document.documentElement.dataset.gsapSetup = "loading";
+  window.portfolioGsapReady = import("./gsap-setup.js")
+    .then(({ default: configuredGsap }) => {
+      window.portfolioGsap = configuredGsap;
+      document.documentElement.dataset.gsapSetup = "ready";
+      return configuredGsap;
+    })
+    .catch((error) => {
+      document.documentElement.dataset.gsapSetup = "failed";
+      console.warn("GSAP setup failed to load.", error);
+      return null;
+    });
+}
+
 async function init() {
   const response = await fetch(manifestUrl);
   manifest = await response.json();
@@ -254,6 +269,7 @@ async function init() {
   bindLightbox();
   bindProgress();
   observeReveals();
+  registerGsapPlugins();
 }
 
 init().catch((error) => {

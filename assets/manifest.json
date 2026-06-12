@@ -424,8 +424,8 @@
   "hero": {
     "hero1": {
       "src": "assets/images/hero/hero-1.webp",
-      "width": 1350,
-      "height": 1800
+      "width": 1140,
+      "height": 1710
     },
     "hero2": {
       "src": "assets/images/hero/hero-2.webp",

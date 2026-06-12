@@ -15,7 +15,7 @@
     {
       "title": "深圳大学寒招推文 01",
       "category": "推文作品",
-      "group": "校园宣发",
+      "group": "校园寒招推文",
       "featured": true,
       "thumb": "assets/images/thumb/02-1.webp",
       "full": "assets/images/full/02-1.webp",
@@ -27,7 +27,7 @@
     {
       "title": "深圳大学寒招推文 02",
       "category": "推文作品",
-      "group": "校园宣发",
+      "group": "校园寒招推文",
       "featured": false,
       "thumb": "assets/images/thumb/03-2.webp",
       "full": "assets/images/full/03-2.webp",
@@ -39,7 +39,7 @@
     {
       "title": "深圳大学寒招推文 03",
       "category": "推文作品",
-      "group": "校园宣发",
+      "group": "校园寒招推文",
       "featured": false,
       "thumb": "assets/images/thumb/04-3.webp",
       "full": "assets/images/full/04-3.webp",
@@ -51,7 +51,7 @@
     {
       "title": "CNAD 活动推文 01",
       "category": "推文作品",
-      "group": "活动传播",
+      "group": "CNAD 推文作品",
       "featured": true,
       "thumb": "assets/images/thumb/05-1-2.webp",
       "full": "assets/images/full/05-1-2.webp",
@@ -63,7 +63,7 @@
     {
       "title": "CNAD 活动推文 02",
       "category": "推文作品",
-      "group": "活动传播",
+      "group": "CNAD 推文作品",
       "featured": false,
       "thumb": "assets/images/thumb/06-2-2.webp",
       "full": "assets/images/full/06-2-2.webp",
@@ -75,7 +75,7 @@
     {
       "title": "CNAD 活动推文 03",
       "category": "推文作品",
-      "group": "活动传播",
+      "group": "CNAD 推文作品",
       "featured": false,
       "thumb": "assets/images/thumb/07-3-2.webp",
       "full": "assets/images/full/07-3-2.webp",
@@ -87,7 +87,7 @@
     {
       "title": "CNAD 活动推文 04",
       "category": "推文作品",
-      "group": "活动传播",
+      "group": "CNAD 推文作品",
       "featured": false,
       "thumb": "assets/images/thumb/08-4.webp",
       "full": "assets/images/full/08-4.webp",
@@ -99,7 +99,7 @@
     {
       "title": "节日主题海报",
       "category": "物料设计",
-      "group": "海报设计",
+      "group": "海报作品",
       "featured": false,
       "thumb": "assets/images/thumb/09-1-3.webp",
       "full": "assets/images/full/09-1-3.webp",
@@ -111,7 +111,7 @@
     {
       "title": "饮品主题海报",
       "category": "物料设计",
-      "group": "海报设计",
+      "group": "海报作品",
       "featured": true,
       "thumb": "assets/images/thumb/10-2-3.webp",
       "full": "assets/images/full/10-2-3.webp",
@@ -123,7 +123,7 @@
     {
       "title": "音乐节主题海报",
       "category": "物料设计",
-      "group": "海报设计",
+      "group": "海报作品",
       "featured": false,
       "thumb": "assets/images/thumb/11-3-3.webp",
       "full": "assets/images/full/11-3-3.webp",
@@ -135,7 +135,7 @@
     {
       "title": "公益主题海报",
       "category": "物料设计",
-      "group": "海报设计",
+      "group": "海报作品",
       "featured": false,
       "thumb": "assets/images/thumb/12-4-2.webp",
       "full": "assets/images/full/12-4-2.webp",
@@ -147,7 +147,7 @@
     {
       "title": "CNAD 活动海报",
       "category": "物料设计",
-      "group": "活动视觉",
+      "group": "CNAD 活动物料",
       "featured": true,
       "thumb": "assets/images/thumb/13-item-2.webp",
       "full": "assets/images/full/13-item-2.webp",
@@ -159,7 +159,7 @@
     {
       "title": "CNAD 活动物料 01",
       "category": "物料设计",
-      "group": "活动视觉",
+      "group": "CNAD 活动物料",
       "featured": false,
       "thumb": "assets/images/thumb/14-1-4.webp",
       "full": "assets/images/full/14-1-4.webp",
@@ -171,7 +171,7 @@
     {
       "title": "CNAD 活动物料 02",
       "category": "物料设计",
-      "group": "活动视觉",
+      "group": "CNAD 活动物料",
       "featured": false,
       "thumb": "assets/images/thumb/15-2-4.webp",
       "full": "assets/images/full/15-2-4.webp",
@@ -183,7 +183,7 @@
     {
       "title": "CNAD 活动物料 03",
       "category": "物料设计",
-      "group": "活动视觉",
+      "group": "CNAD 活动物料",
       "featured": false,
       "thumb": "assets/images/thumb/16-3-4.webp",
       "full": "assets/images/full/16-3-4.webp",
@@ -195,7 +195,7 @@
     {
       "title": "雀巢商赛 UI 方案 01",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/17-ui.webp",
       "full": "assets/images/full/17-ui.webp",
@@ -207,7 +207,7 @@
     {
       "title": "雀巢商赛 UI 方案 02",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/18-ui-2.webp",
       "full": "assets/images/full/18-ui-2.webp",
@@ -219,7 +219,7 @@
     {
       "title": "雀巢商赛 UI 方案 03",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/19-ui-3.webp",
       "full": "assets/images/full/19-ui-3.webp",
@@ -231,7 +231,7 @@
     {
       "title": "雀巢商赛包装设计",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": true,
       "thumb": "assets/images/thumb/20-item-3.webp",
       "full": "assets/images/full/20-item-3.webp",
@@ -243,7 +243,7 @@
     {
       "title": "包装设计六视图",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/21-item-4.webp",
       "full": "assets/images/full/21-item-4.webp",
@@ -255,7 +255,7 @@
     {
       "title": "包装设计平面图 01",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/22-item-5.webp",
       "full": "assets/images/full/22-item-5.webp",
@@ -267,7 +267,7 @@
     {
       "title": "包装设计平面图 02",
       "category": "物料设计",
-      "group": "商业竞赛",
+      "group": "雀巢商赛",
       "featured": false,
       "thumb": "assets/images/thumb/23-2-5.webp",
       "full": "assets/images/full/23-2-5.webp",
@@ -373,9 +373,9 @@
       "height": 1440
     },
     {
-      "title": "风景摄影 01",
+      "title": "自然风景摄影 01",
       "category": "摄影作品",
-      "group": "风景摄影",
+      "group": "自然风景摄影",
       "featured": true,
       "thumb": "assets/images/thumb/32-1-6.webp",
       "full": "assets/images/full/32-1-6.webp",
@@ -385,9 +385,9 @@
       "height": 815
     },
     {
-      "title": "风景摄影 02",
+      "title": "自然风景摄影 02",
       "category": "摄影作品",
-      "group": "风景摄影",
+      "group": "自然风景摄影",
       "featured": false,
       "thumb": "assets/images/thumb/33-2-7.webp",
       "full": "assets/images/full/33-2-7.webp",
@@ -397,9 +397,9 @@
       "height": 815
     },
     {
-      "title": "风景摄影 03",
+      "title": "自然风景摄影 03",
       "category": "摄影作品",
-      "group": "风景摄影",
+      "group": "自然风景摄影",
       "featured": false,
       "thumb": "assets/images/thumb/34-3-6.webp",
       "full": "assets/images/full/34-3-6.webp",
@@ -409,9 +409,9 @@
       "height": 545
     },
     {
-      "title": "风景摄影 04",
+      "title": "自然风景摄影 04",
       "category": "摄影作品",
-      "group": "风景摄影",
+      "group": "自然风景摄影",
       "featured": false,
       "thumb": "assets/images/thumb/35-4-4.webp",
       "full": "assets/images/full/35-4-4.webp",
@@ -536,7 +536,7 @@
     {
       "title": "雀巢商赛鲜味周历",
       "kind": "PDF",
-      "note": "商业竞赛策划案",
+      "note": "雀巢商赛策划案",
       "src": "assets/docs/03-item.pdf",
       "sizeMb": 12.7
     },

@@ -1,0 +1,551 @@
+{
+  "images": [
+    {
+      "title": "小红书账号主页",
+      "category": "运营作品",
+      "group": "自媒体运营",
+      "featured": true,
+      "thumb": "assets/images/thumb/01-item.webp",
+      "full": "assets/images/full/01-item.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 658,
+      "width": 1179,
+      "height": 1021
+    },
+    {
+      "title": "深圳大学寒招推文 01",
+      "category": "推文作品",
+      "group": "校园宣发",
+      "featured": true,
+      "thumb": "assets/images/thumb/02-1.webp",
+      "full": "assets/images/full/02-1.webp",
+      "thumbWidth": 420,
+      "thumbHeight": 760,
+      "width": 1035,
+      "height": 1873
+    },
+    {
+      "title": "深圳大学寒招推文 02",
+      "category": "推文作品",
+      "group": "校园宣发",
+      "featured": false,
+      "thumb": "assets/images/thumb/03-2.webp",
+      "full": "assets/images/full/03-2.webp",
+      "thumbWidth": 333,
+      "thumbHeight": 760,
+      "width": 832,
+      "height": 1900
+    },
+    {
+      "title": "深圳大学寒招推文 03",
+      "category": "推文作品",
+      "group": "校园宣发",
+      "featured": false,
+      "thumb": "assets/images/thumb/04-3.webp",
+      "full": "assets/images/full/04-3.webp",
+      "thumbWidth": 268,
+      "thumbHeight": 760,
+      "width": 671,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动推文 01",
+      "category": "推文作品",
+      "group": "活动传播",
+      "featured": true,
+      "thumb": "assets/images/thumb/05-1-2.webp",
+      "full": "assets/images/full/05-1-2.webp",
+      "thumbWidth": 366,
+      "thumbHeight": 760,
+      "width": 914,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动推文 02",
+      "category": "推文作品",
+      "group": "活动传播",
+      "featured": false,
+      "thumb": "assets/images/thumb/06-2-2.webp",
+      "full": "assets/images/full/06-2-2.webp",
+      "thumbWidth": 250,
+      "thumbHeight": 760,
+      "width": 625,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动推文 03",
+      "category": "推文作品",
+      "group": "活动传播",
+      "featured": false,
+      "thumb": "assets/images/thumb/07-3-2.webp",
+      "full": "assets/images/full/07-3-2.webp",
+      "thumbWidth": 351,
+      "thumbHeight": 760,
+      "width": 878,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动推文 04",
+      "category": "推文作品",
+      "group": "活动传播",
+      "featured": false,
+      "thumb": "assets/images/thumb/08-4.webp",
+      "full": "assets/images/full/08-4.webp",
+      "thumbWidth": 352,
+      "thumbHeight": 760,
+      "width": 879,
+      "height": 1900
+    },
+    {
+      "title": "节日主题海报",
+      "category": "物料设计",
+      "group": "海报设计",
+      "featured": false,
+      "thumb": "assets/images/thumb/09-1-3.webp",
+      "full": "assets/images/full/09-1-3.webp",
+      "thumbWidth": 538,
+      "thumbHeight": 760,
+      "width": 662,
+      "height": 936
+    },
+    {
+      "title": "饮品主题海报",
+      "category": "物料设计",
+      "group": "海报设计",
+      "featured": true,
+      "thumb": "assets/images/thumb/10-2-3.webp",
+      "full": "assets/images/full/10-2-3.webp",
+      "thumbWidth": 537,
+      "thumbHeight": 760,
+      "width": 1280,
+      "height": 1811
+    },
+    {
+      "title": "音乐节主题海报",
+      "category": "物料设计",
+      "group": "海报设计",
+      "featured": false,
+      "thumb": "assets/images/thumb/11-3-3.webp",
+      "full": "assets/images/full/11-3-3.webp",
+      "thumbWidth": 537,
+      "thumbHeight": 760,
+      "width": 1080,
+      "height": 1528
+    },
+    {
+      "title": "公益主题海报",
+      "category": "物料设计",
+      "group": "海报设计",
+      "featured": false,
+      "thumb": "assets/images/thumb/12-4-2.webp",
+      "full": "assets/images/full/12-4-2.webp",
+      "thumbWidth": 304,
+      "thumbHeight": 760,
+      "width": 611,
+      "height": 1527
+    },
+    {
+      "title": "CNAD 活动海报",
+      "category": "物料设计",
+      "group": "活动视觉",
+      "featured": true,
+      "thumb": "assets/images/thumb/13-item-2.webp",
+      "full": "assets/images/full/13-item-2.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 227,
+      "width": 1900,
+      "height": 567
+    },
+    {
+      "title": "CNAD 活动物料 01",
+      "category": "物料设计",
+      "group": "活动视觉",
+      "featured": false,
+      "thumb": "assets/images/thumb/14-1-4.webp",
+      "full": "assets/images/full/14-1-4.webp",
+      "thumbWidth": 510,
+      "thumbHeight": 760,
+      "width": 1275,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动物料 02",
+      "category": "物料设计",
+      "group": "活动视觉",
+      "featured": false,
+      "thumb": "assets/images/thumb/15-2-4.webp",
+      "full": "assets/images/full/15-2-4.webp",
+      "thumbWidth": 510,
+      "thumbHeight": 760,
+      "width": 1275,
+      "height": 1900
+    },
+    {
+      "title": "CNAD 活动物料 03",
+      "category": "物料设计",
+      "group": "活动视觉",
+      "featured": false,
+      "thumb": "assets/images/thumb/16-3-4.webp",
+      "full": "assets/images/full/16-3-4.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 477,
+      "width": 1900,
+      "height": 1192
+    },
+    {
+      "title": "雀巢商赛 UI 方案 01",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/17-ui.webp",
+      "full": "assets/images/full/17-ui.webp",
+      "thumbWidth": 372,
+      "thumbHeight": 760,
+      "width": 450,
+      "height": 920
+    },
+    {
+      "title": "雀巢商赛 UI 方案 02",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/18-ui-2.webp",
+      "full": "assets/images/full/18-ui-2.webp",
+      "thumbWidth": 372,
+      "thumbHeight": 760,
+      "width": 450,
+      "height": 920
+    },
+    {
+      "title": "雀巢商赛 UI 方案 03",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/19-ui-3.webp",
+      "full": "assets/images/full/19-ui-3.webp",
+      "thumbWidth": 372,
+      "thumbHeight": 760,
+      "width": 450,
+      "height": 920
+    },
+    {
+      "title": "雀巢商赛包装设计",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": true,
+      "thumb": "assets/images/thumb/20-item-3.webp",
+      "full": "assets/images/full/20-item-3.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 570,
+      "width": 1900,
+      "height": 1425
+    },
+    {
+      "title": "包装设计六视图",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/21-item-4.webp",
+      "full": "assets/images/full/21-item-4.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 576,
+      "width": 1599,
+      "height": 1212
+    },
+    {
+      "title": "包装设计平面图 01",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/22-item-5.webp",
+      "full": "assets/images/full/22-item-5.webp",
+      "thumbWidth": 463,
+      "thumbHeight": 578,
+      "width": 463,
+      "height": 578
+    },
+    {
+      "title": "包装设计平面图 02",
+      "category": "物料设计",
+      "group": "商业竞赛",
+      "featured": false,
+      "thumb": "assets/images/thumb/23-2-5.webp",
+      "full": "assets/images/full/23-2-5.webp",
+      "thumbWidth": 364,
+      "thumbHeight": 496,
+      "width": 364,
+      "height": 496
+    },
+    {
+      "title": "人像摄影 01",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": true,
+      "thumb": "assets/images/thumb/24-1-5.webp",
+      "full": "assets/images/full/24-1-5.webp",
+      "thumbWidth": 427,
+      "thumbHeight": 760,
+      "width": 828,
+      "height": 1472
+    },
+    {
+      "title": "人像摄影 02",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/25-2-6.webp",
+      "full": "assets/images/full/25-2-6.webp",
+      "thumbWidth": 506,
+      "thumbHeight": 760,
+      "width": 835,
+      "height": 1253
+    },
+    {
+      "title": "人像摄影 03",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/26-3-5.webp",
+      "full": "assets/images/full/26-3-5.webp",
+      "thumbWidth": 566,
+      "thumbHeight": 760,
+      "width": 903,
+      "height": 1213
+    },
+    {
+      "title": "人像摄影 04",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/27-4-3.webp",
+      "full": "assets/images/full/27-4-3.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 447,
+      "width": 1393,
+      "height": 819
+    },
+    {
+      "title": "人像摄影 05",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/28-5.webp",
+      "full": "assets/images/full/28-5.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 447,
+      "width": 1391,
+      "height": 819
+    },
+    {
+      "title": "人像摄影 06",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/29-6.webp",
+      "full": "assets/images/full/29-6.webp",
+      "thumbWidth": 501,
+      "thumbHeight": 760,
+      "width": 849,
+      "height": 1289
+    },
+    {
+      "title": "人像摄影 07",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/30-7.webp",
+      "full": "assets/images/full/30-7.webp",
+      "thumbWidth": 570,
+      "thumbHeight": 760,
+      "width": 810,
+      "height": 1080
+    },
+    {
+      "title": "人像摄影 08",
+      "category": "摄影作品",
+      "group": "人像摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/31-8.webp",
+      "full": "assets/images/full/31-8.webp",
+      "thumbWidth": 570,
+      "thumbHeight": 760,
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "title": "风景摄影 01",
+      "category": "摄影作品",
+      "group": "风景摄影",
+      "featured": true,
+      "thumb": "assets/images/thumb/32-1-6.webp",
+      "full": "assets/images/full/32-1-6.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 507,
+      "width": 1222,
+      "height": 815
+    },
+    {
+      "title": "风景摄影 02",
+      "category": "摄影作品",
+      "group": "风景摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/33-2-7.webp",
+      "full": "assets/images/full/33-2-7.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 506,
+      "width": 1223,
+      "height": 815
+    },
+    {
+      "title": "风景摄影 03",
+      "category": "摄影作品",
+      "group": "风景摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/34-3-6.webp",
+      "full": "assets/images/full/34-3-6.webp",
+      "thumbWidth": 760,
+      "thumbHeight": 506,
+      "width": 818,
+      "height": 545
+    },
+    {
+      "title": "风景摄影 04",
+      "category": "摄影作品",
+      "group": "风景摄影",
+      "featured": false,
+      "thumb": "assets/images/thumb/35-4-4.webp",
+      "full": "assets/images/full/35-4-4.webp",
+      "thumbWidth": 623,
+      "thumbHeight": 407,
+      "width": 623,
+      "height": 407
+    }
+  ],
+  "hero": {
+    "hero1": {
+      "src": "assets/images/hero/hero-1.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    "hero2": {
+      "src": "assets/images/hero/hero-2.webp",
+      "width": 1800,
+      "height": 1139
+    },
+    "hero3": {
+      "src": "assets/images/hero/hero-3.webp",
+      "width": 971,
+      "height": 1359
+    }
+  },
+  "videos": [
+    {
+      "title": "Logo 动画视频",
+      "category": "视频作品",
+      "note": "动态图形与品牌识别练习",
+      "src": "assets/video/01-logo.mp4",
+      "poster": "assets/video/01-logo.webp",
+      "sizeMb": 0.5
+    },
+    {
+      "title": "《ditto》翻拍",
+      "category": "视频作品",
+      "note": "短片翻拍、分镜执行与后期剪辑",
+      "src": "assets/video/02-ditto.mp4",
+      "poster": "assets/video/02-ditto.webp",
+      "sizeMb": 12.6
+    },
+    {
+      "title": "夜宵摊创业故事采访",
+      "category": "视频作品",
+      "note": "人物采访、纪实叙事与剪辑",
+      "src": "assets/video/03-item.mp4",
+      "poster": "assets/video/03-item.webp",
+      "sizeMb": 13.3
+    },
+    {
+      "title": "《酸甜一口，童心一刻》",
+      "category": "视频作品",
+      "note": "品牌短片与情绪化表达",
+      "src": "assets/video/04-item.mp4",
+      "poster": "assets/video/04-item.webp",
+      "sizeMb": 8.5
+    },
+    {
+      "title": "AI 短剧《烬骨》预告片",
+      "category": "AI 能力",
+      "note": "AI 视频生成、提示词设计与预告片包装",
+      "src": "assets/video/05-ai.mp4",
+      "poster": "assets/video/05-ai.webp",
+      "sizeMb": 5.1
+    }
+  ],
+  "audio": [
+    {
+      "title": "HBN 眼霜 - 咖啡店",
+      "brand": "HBN",
+      "src": "assets/audio/01-hbn.mp3",
+      "sizeMb": 0.36
+    },
+    {
+      "title": "HBN 眼霜 - 机器人",
+      "brand": "HBN",
+      "src": "assets/audio/02-hbn.mp3",
+      "sizeMb": 0.47
+    },
+    {
+      "title": "娃哈哈 - 月底没钱",
+      "brand": "娃哈哈",
+      "src": "assets/audio/03-item.mp3",
+      "sizeMb": 0.36
+    },
+    {
+      "title": "娃哈哈 - 毕业照",
+      "brand": "娃哈哈",
+      "src": "assets/audio/04-item.mp3",
+      "sizeMb": 0.44
+    },
+    {
+      "title": "纳爱斯 - 特工",
+      "brand": "纳爱斯",
+      "src": "assets/audio/05-item.mp3",
+      "sizeMb": 0.44
+    },
+    {
+      "title": "纳爱斯 - 着火篇",
+      "brand": "纳爱斯",
+      "src": "assets/audio/06-item.mp3",
+      "sizeMb": 0.46
+    }
+  ],
+  "docs": [
+    {
+      "title": "任晨佳个人简历",
+      "kind": "PDF",
+      "note": "含完整联系方式、教育经历与项目经历",
+      "src": "assets/docs/01-item.pdf",
+      "sizeMb": 0.5
+    },
+    {
+      "title": "大广赛阿里云千问共创计划",
+      "kind": "PDF",
+      "note": "品牌传播策划案",
+      "src": "assets/docs/02-item.pdf",
+      "sizeMb": 78.6
+    },
+    {
+      "title": "雀巢商赛鲜味周历",
+      "kind": "PDF",
+      "note": "商业竞赛策划案",
+      "src": "assets/docs/03-item.pdf",
+      "sizeMb": 12.7
+    },
+    {
+      "title": "AI 短剧提示词记录",
+      "kind": "DOCX",
+      "note": "提示词、分镜与生成过程记录",
+      "src": "assets/docs/04-ai.docx",
+      "sizeMb": 0.0
+    }
+  ]
+}

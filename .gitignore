@@ -1,0 +1,7 @@
+.codex_tmp/
+.cache/
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+*.log

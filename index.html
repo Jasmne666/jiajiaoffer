@@ -54,6 +54,7 @@
         <a href="#profile">履历</a>
         <a href="#works">作品</a>
         <a href="#motion">视频</a>
+        <a href="#audio">音频</a>
         <a href="#docs">策划案</a>
         <a class="nav-cta" href="mailto:r3127511240@163.com">联系我</a>
       </nav>
@@ -195,11 +196,9 @@
       <section class="section works-section" id="works" aria-labelledby="worksTitle">
         <div class="section-head reveal">
           <p class="eyebrow">Selected Works</p>
-          <h2 id="worksTitle">图文、物料、摄影与商业视觉</h2>
+          <h2 id="worksTitle">按类别横向浏览作品图</h2>
         </div>
-        <div class="work-carousel reveal" id="workCarousel" aria-label="作品图横向轮播"></div>
-        <div class="filter-bar reveal" id="filterBar" aria-label="作品分类筛选"></div>
-        <div class="work-grid" id="workGrid" aria-live="polite"></div>
+        <div class="work-carousel-stack" id="workCarousels" aria-label="按类别横向轮播作品图"></div>
       </section>
 
       <section class="section motion-section" id="motion" aria-labelledby="motionTitle">
@@ -210,6 +209,14 @@
         <div class="video-grid" id="videoGrid"></div>
       </section>
 
+      <section class="section audio-section" id="audio" aria-labelledby="audioTitle">
+        <div class="section-head reveal">
+          <p class="eyebrow">Audio</p>
+          <h2 id="audioTitle">广播广告脚本与成片</h2>
+        </div>
+        <div class="audio-grid" id="audioGrid"></div>
+      </section>
+
       <section class="section docs-section" id="docs" aria-labelledby="docsTitle">
         <div class="section-head reveal">
           <p class="eyebrow">Documents</p>
@@ -218,12 +225,13 @@
         <div class="doc-grid" id="docGrid"></div>
       </section>
 
-      <section class="section audio-section" aria-labelledby="audioTitle">
+      <section class="section works-detail-section" id="workDetails" aria-labelledby="workDetailsTitle">
         <div class="section-head reveal">
-          <p class="eyebrow">Audio</p>
-          <h2 id="audioTitle">广播广告脚本与成片</h2>
+          <p class="eyebrow">Image Library</p>
+          <h2 id="workDetailsTitle">完整图集与分类筛选</h2>
         </div>
-        <div class="audio-grid" id="audioGrid"></div>
+        <div class="filter-bar reveal" id="filterBar" aria-label="作品分类筛选"></div>
+        <div class="work-grid" id="workGrid" aria-live="polite"></div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contactTitle">

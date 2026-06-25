@@ -584,9 +584,13 @@ input {
   color: #fff;
 }
 
+.work-carousel-stack {
+  display: grid;
+  gap: 26px;
+}
+
 .work-carousel {
   position: relative;
-  margin: 0 0 28px;
   padding: 24px 0 26px;
   overflow: hidden;
   border-top: 1px solid rgba(17, 17, 19, 0.1);
@@ -605,6 +609,12 @@ input {
   margin: 0;
   font-size: clamp(24px, 3vw, 38px);
   line-height: 1.08;
+}
+
+.work-carousel-head p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 8px 0 0;
+  color: var(--muted);
 }
 
 .carousel-meta {
@@ -670,6 +680,16 @@ input {
   cursor: grabbing;
 }
 
+.work-carousel.is-static .work-carousel-viewport {
+  cursor: zoom-in;
+  mask-image: none;
+}
+
+.work-carousel.is-static .carousel-controls,
+.work-carousel.is-static .carousel-rail {
+  display: none;
+}
+
 .work-carousel-track {
   display: flex;
   width: max-content;
@@ -677,6 +697,10 @@ input {
   align-items: stretch;
   padding: 8px 0 14px;
   will-change: transform;
+}
+
+.work-carousel.is-static .work-carousel-track {
+  width: 100%;
 }
 
 .carousel-card {
@@ -905,6 +929,10 @@ input {
   justify-content: space-between;
   gap: 12px;
   padding: 14px 16px 0;
+}
+
+.works-detail-section {
+  padding-top: 72px;
 }
 
 .video-grid {
@@ -1271,8 +1299,11 @@ input {
     min-width: max-content;
   }
 
+  .work-carousel-stack {
+    gap: 18px;
+  }
+
   .work-carousel {
-    margin-bottom: 22px;
     padding: 20px 0 24px;
   }
 

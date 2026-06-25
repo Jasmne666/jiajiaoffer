@@ -2,7 +2,7 @@ const manifestUrl = "assets/manifest.json";
 
 const selectors = {
   filterBar: document.querySelector("#filterBar"),
-  workCarousel: document.querySelector("#workCarousel"),
+  workCarousels: document.querySelector("#workCarousels"),
   workGrid: document.querySelector("#workGrid"),
   videoGrid: document.querySelector("#videoGrid"),
   docGrid: document.querySelector("#docGrid"),
@@ -15,7 +15,7 @@ const selectors = {
 
 let manifest = null;
 let currentCategory = "全部";
-let workCarouselController = null;
+let workCarouselControllers = [];
 
 const categoryOrder = ["运营作品", "推文作品", "物料设计", "摄影作品"];
 const groupOrder = {
@@ -72,15 +72,28 @@ function carouselImageOrder(images) {
   });
 }
 
-function renderWorkCarousel(images) {
-  const items = carouselImageOrder(images);
-  const repeatedItems = [0, 1, 2].flatMap((copy) => items.map((item, index) => ({ item, index, copy })));
+function renderWorkCarousels(images) {
+  const categoryGroups = orderedGroups(images, "category", categoryOrder);
 
-  selectors.workCarousel.innerHTML = `
+  selectors.workCarousels.innerHTML = categoryGroups
+    .map(([category, items], rowIndex) => renderWorkCarousel(category, carouselImageOrder(items), rowIndex))
+    .join("");
+}
+
+function renderWorkCarousel(category, items, rowIndex) {
+  const canLoop = items.length > 1;
+  const repeatedItems = canLoop
+    ? [0, 1, 2].flatMap((copy) => items.map((item, index) => ({ item, index, copy })))
+    : items.map((item, index) => ({ item, index, copy: 1 }));
+  const displayIndex = String(rowIndex + 1).padStart(2, "0");
+
+  return `
+    <section class="work-carousel reveal ${canLoop ? "" : "is-static"}" data-carousel-category="${escapeHtml(category)}" data-carousel-count="${items.length}" data-carousel-flow="${rowIndex % 2 === 0 ? 1 : -1}" aria-label="${escapeHtml(category)}横向轮播">
     <div class="work-carousel-head">
       <div>
-        <p class="eyebrow">Image Stream</p>
-        <h3>全部作品图</h3>
+        <p class="eyebrow">Image Stream ${displayIndex}</p>
+        <h3>${escapeHtml(category)}</h3>
+        <p>${escapeHtml(categoryNotes[category] || "按作品来源文件夹分组展示。")}</p>
       </div>
       <div class="carousel-meta" aria-label="轮播状态">
         <span>${items.length} 张</span>
@@ -96,6 +109,7 @@ function renderWorkCarousel(images) {
       </div>
     </div>
     <div class="carousel-rail" aria-hidden="true"><span></span></div>
+    </section>
   `;
 }
 
@@ -270,7 +284,7 @@ function bindLightboxTarget(target) {
 
 function bindLightbox() {
   bindLightboxTarget(selectors.workGrid);
-  bindLightboxTarget(selectors.workCarousel);
+  bindLightboxTarget(selectors.workCarousels);
 
   const close = () => {
     selectors.lightbox.classList.remove("is-open");
@@ -332,21 +346,26 @@ function registerGsapPlugins() {
   return window.portfolioGsapReady;
 }
 
-function setupWorkCarousel(gsap) {
-  if (!selectors.workCarousel || !gsap) return;
-  if (workCarouselController) workCarouselController.destroy();
+function setupWorkCarousels(gsap) {
+  if (!selectors.workCarousels || !gsap) return;
+  workCarouselControllers.forEach((controller) => controller.destroy());
+  workCarouselControllers = [...selectors.workCarousels.querySelectorAll(".work-carousel")]
+    .map((root) => setupWorkCarousel(root, gsap))
+    .filter(Boolean);
+}
 
-  const root = selectors.workCarousel;
+function setupWorkCarousel(root, gsap) {
   const viewport = root.querySelector(".work-carousel-viewport");
   const track = root.querySelector(".work-carousel-track");
   const controls = root.querySelectorAll("[data-carousel-direction]");
   const rail = root.querySelector(".carousel-rail span");
-  const originalCount = manifest.images.length;
+  const originalCount = Number(root.dataset.carouselCount) || 0;
   const cards = [...root.querySelectorAll(".carousel-card")];
   const Draggable = gsap.core.globals().Draggable;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const autoplayFlow = Number(root.dataset.carouselFlow) || 1;
 
-  if (!track || !cards.length) return;
+  if (!track || !cards.length || originalCount < 2 || cards.length < originalCount * 3) return null;
 
   let segmentWidth = 0;
   let snapPoints = [];
@@ -356,6 +375,7 @@ function setupWorkCarousel(gsap) {
   let isPaused = false;
   let resizeTimer = 0;
   let pointerResetTimer = 0;
+  const eventController = new AbortController();
 
   const currentX = () => Number(gsap.getProperty(track, "x")) || 0;
   const normalizeX = (value) => {
@@ -446,7 +466,7 @@ function setupWorkCarousel(gsap) {
   };
   const tick = (_time, deltaTime) => {
     if (prefersReducedMotion || isPaused || root.matches(":hover") || root.dataset.pointerMoved === "true") return;
-    setTrackX(currentX() - (deltaTime / 1000) * 22);
+    setTrackX(currentX() - (deltaTime / 1000) * 18 * autoplayFlow);
   };
   const markPointerMoved = () => {
     root.dataset.pointerMoved = "true";
@@ -466,15 +486,17 @@ function setupWorkCarousel(gsap) {
 
   root.classList.add("is-enhanced");
   controls.forEach((button) => {
-    button.addEventListener("click", () => moveBy(Number(button.dataset.carouselDirection)));
+    button.addEventListener("click", () => moveBy(Number(button.dataset.carouselDirection)), {
+      signal: eventController.signal,
+    });
   });
   root.addEventListener("pointerenter", () => {
     isPaused = true;
-  });
+  }, { signal: eventController.signal });
   root.addEventListener("pointerleave", () => {
     if (root.dataset.pointerMoved !== "true") isPaused = false;
-  });
-  window.addEventListener("resize", onResize);
+  }, { signal: eventController.signal });
+  window.addEventListener("resize", onResize, { signal: eventController.signal });
   refresh();
   gsap.ticker.add(tick);
 
@@ -519,12 +541,12 @@ function setupWorkCarousel(gsap) {
     })[0];
   }
 
-  workCarouselController = {
+  return {
     destroy() {
       if (tween) tween.kill();
       draggable?.kill();
       gsap.ticker.remove(tick);
-      window.removeEventListener("resize", onResize);
+      eventController.abort();
       window.clearTimeout(resizeTimer);
       window.clearTimeout(pointerResetTimer);
     },
@@ -534,7 +556,7 @@ function setupWorkCarousel(gsap) {
 async function init() {
   const response = await fetch(manifestUrl);
   manifest = await response.json();
-  renderWorkCarousel(manifest.images);
+  renderWorkCarousels(manifest.images);
   renderFilters(manifest.images);
   renderWorks(manifest.images);
   renderVideos(manifest.videos);
@@ -543,7 +565,7 @@ async function init() {
   bindLightbox();
   bindProgress();
   observeReveals();
-  registerGsapPlugins().then((gsap) => setupWorkCarousel(gsap));
+  registerGsapPlugins().then((gsap) => setupWorkCarousels(gsap));
 }
 
 init().catch((error) => {

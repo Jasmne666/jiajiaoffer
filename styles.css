@@ -108,16 +108,18 @@ input {
 }
 
 .nav-links {
-  gap: 4px;
+  min-width: 0;
+  gap: 2px;
 }
 
 .nav-links a {
   min-height: 36px;
-  padding: 8px 14px;
+  padding: 8px 10px;
   border-radius: 999px;
   color: rgba(17, 17, 19, 0.72);
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
+  white-space: nowrap;
   transition:
     color 180ms ease,
     background 180ms ease;

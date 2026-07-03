@@ -419,6 +419,18 @@
       "thumbHeight": 407,
       "width": 623,
       "height": 407
+    },
+    {
+      "title": "挑战杯 IP 设计《朝露晚茗》",
+      "category": "物料设计",
+      "group": "IP 形象设计",
+      "featured": true,
+      "thumb": "assets/images/thumb/36-ip.webp",
+      "full": "assets/images/full/36-ip.webp",
+      "thumbWidth": 471,
+      "thumbHeight": 760,
+      "width": 1177,
+      "height": 1900
     }
   ],
   "hero": {
@@ -478,6 +490,14 @@
       "src": "assets/video/05-ai.mp4",
       "poster": "assets/video/05-ai.webp",
       "sizeMb": 5.1
+    },
+    {
+      "title": "AI 短片《未命名人生》",
+      "category": "AI 能力",
+      "note": "AI 影像生成、校园成长叙事与长片剪辑",
+      "src": "assets/video/06-ai.mp4",
+      "poster": "assets/video/06-ai.webp",
+      "sizeMb": 45.9
     }
   ],
   "audio": [

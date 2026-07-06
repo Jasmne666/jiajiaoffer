@@ -478,7 +478,7 @@
     {
       "title": "《酸甜一口，童心一刻》",
       "category": "视频作品",
-      "note": "品牌短片与情绪化表达",
+      "note": "省级一等奖品牌微电影，主导脚本分镜与制作统筹",
       "src": "assets/video/04-item.mp4",
       "poster": "assets/video/04-item.webp",
       "sizeMb": 8.5
@@ -486,7 +486,7 @@
     {
       "title": "AI 短剧《烬骨》预告片",
       "category": "AI 能力",
-      "note": "AI 视频生成、提示词设计与预告片包装",
+      "note": "AIGC 短剧路演第一名，多模态生成与预告片包装",
       "src": "assets/video/05-ai.mp4",
       "poster": "assets/video/05-ai.webp",
       "sizeMb": 5.1
@@ -540,11 +540,11 @@
   ],
   "docs": [
     {
-      "title": "任晨佳个人简历",
+      "title": "任晨佳最新简历",
       "kind": "PDF",
       "note": "含完整联系方式、教育经历与项目经历",
       "src": "assets/docs/01-item.pdf",
-      "sizeMb": 0.5
+      "sizeMb": 0.4
     },
     {
       "title": "大广赛阿里云千问共创计划",

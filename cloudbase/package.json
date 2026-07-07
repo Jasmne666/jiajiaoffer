@@ -1,0 +1,12 @@
+{
+  "name": "jiajia-portfolio-cloudbase",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "tcb fn deploy portfolio-assistant --httpFn --path /portfolio-assistant --yes",
+    "test": "npm --prefix functions/portfolio-assistant test"
+  },
+  "devDependencies": {
+    "@cloudbase/cli": "3.5.10"
+  }
+}

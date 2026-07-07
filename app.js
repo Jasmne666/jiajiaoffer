@@ -17,6 +17,7 @@ const selectors = {
   assistantMessages: document.querySelector("#assistantMessages"),
   assistantForm: document.querySelector("#assistantForm"),
   assistantInput: document.querySelector("#assistantInput"),
+  assistantSource: document.querySelector("#assistantSource"),
 };
 
 let manifest = null;
@@ -123,6 +124,9 @@ const assistantKnowledge = [
     ],
   },
 ];
+
+const assistantApiUrl = document.querySelector('meta[name="assistant-api"]')?.content.trim() || "";
+const assistantApiEnabled = assistantApiUrl.startsWith("https://") && !assistantApiUrl.includes("REPLACE_ME");
 
 const escapeHtml = (value) =>
   String(value)
@@ -446,6 +450,31 @@ function findAssistantAnswer(question) {
   );
 }
 
+async function requestAssistantAnswer(question, history) {
+  if (!assistantApiEnabled) throw new Error("Assistant API is not configured.");
+
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), 20000);
+
+  try {
+    const response = await fetch(assistantApiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, history }),
+      signal: controller.signal,
+    });
+
+    const payload = await response.json().catch(() => null);
+    if (!response.ok || !payload?.answer) {
+      throw new Error(payload?.error || `Assistant request failed with ${response.status}.`);
+    }
+
+    return String(payload.answer).trim();
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+}
+
 function appendAssistantMessage(role, content, links = []) {
   const article = document.createElement("article");
   article.className = `assistant-message assistant-message-${role}`;
@@ -487,14 +516,19 @@ function bindAssistant() {
   if (!selectors.assistantDialog || !selectors.assistantLauncher) return;
 
   let isAnswering = false;
+  const conversation = [];
   const submitButton = selectors.assistantForm.querySelector('button[type="submit"]');
+
+  if (selectors.assistantSource && assistantApiEnabled) {
+    selectors.assistantSource.textContent = "基于作品与简历资料 · DeepSeek 智能回答";
+  }
 
   const open = () => {
     selectors.assistantDialog.showModal();
     window.setTimeout(() => selectors.assistantInput.focus(), 80);
   };
   const close = () => selectors.assistantDialog.close();
-  const ask = (question) => {
+  const ask = async (question) => {
     const trimmed = question.trim();
     if (!trimmed || isAnswering) return;
 
@@ -504,16 +538,39 @@ function bindAssistant() {
     submitButton.disabled = true;
     appendAssistantMessage("user", trimmed);
 
-    const loading = appendAssistantMessage("loading", "正在从简历和作品中查找相关信息...");
-    window.setTimeout(() => {
-      const result = findAssistantAnswer(trimmed);
+    const loading = appendAssistantMessage(
+      "loading",
+      assistantApiEnabled ? "正在结合简历与作品生成回答..." : "正在从简历和作品中查找相关信息...",
+    );
+
+    try {
+      const localResult = findAssistantAnswer(trimmed);
+      let answer = localResult.answer;
+
+      if (assistantApiEnabled) {
+        try {
+          answer = await requestAssistantAnswer(trimmed, conversation.slice(-6));
+        } catch (error) {
+          console.warn("DeepSeek assistant unavailable; using local answer.", error);
+          answer = `当前智能回答暂时不可用，以下是作品集中的相关信息：${localResult.answer}`;
+        }
+      } else {
+        await new Promise((resolve) => window.setTimeout(resolve, 360));
+      }
+
       loading.remove();
-      appendAssistantMessage("bot", result.answer, result.links);
+      appendAssistantMessage("bot", answer, localResult.links);
+      conversation.push(
+        { role: "user", content: trimmed },
+        { role: "assistant", content: answer },
+      );
+      if (conversation.length > 8) conversation.splice(0, conversation.length - 8);
+    } finally {
       selectors.assistantForm.removeAttribute("aria-busy");
       submitButton.disabled = false;
       isAnswering = false;
       selectors.assistantInput.focus();
-    }, 360);
+    }
   };
 
   selectors.assistantLauncher.addEventListener("click", open);

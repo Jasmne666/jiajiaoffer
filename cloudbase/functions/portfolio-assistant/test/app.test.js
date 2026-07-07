@@ -19,7 +19,7 @@ test("returns a DeepSeek answer for an allowed request", async () => {
     const body = JSON.parse(options.body);
     assert.equal(body.model, "deepseek-v4-flash");
     assert.equal(body.thinking.type, "disabled");
-    return Response.json({ choices: [{ message: { content: "她完成了 PawCare 等代表项目。" } }] });
+    return Response.json({ choices: [{ message: { content: "她完成了 **PawCare** 等代表项目。" } }] });
   };
   const app = createApp({ fetchImpl, apiKey: "test-key" });
 
